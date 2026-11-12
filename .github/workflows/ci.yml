@@ -1,0 +1,15 @@
+name: Website source validation
+on: [push, pull_request]
+permissions:
+  contents: read
+jobs:
+  static:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate deployable HTML rather than Python build script
+        run: |
+          head -n 1 index.html | grep -qi 'doctype html'
+          grep -qi '<html lang=' index.html
+          grep -q 'DEMO ONLY — NOT SUBMITTED' index.html
+          ! grep -q 'from pathlib import Path' index.html
