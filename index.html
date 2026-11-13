@@ -21,12 +21,17 @@ section{padding:88px 0}.head{max-width:650px;margin-bottom:38px}.head h2{font-si
 .formsection{background:#e8e5dc}.formwrap{max-width:820px}.formcard{background:var(--paper);border:1px solid var(--line);padding:32px}.formcard h3{font-size:32px;margin:0 0 5px}.formcard>p{color:var(--muted);margin-top:0}.formgrid{display:grid;grid-template-columns:1fr 1fr;gap:18px}.field.full{grid-column:1/-1}.field label{display:block;font-size:12px;font-weight:700;margin-bottom:7px}.field input,.field select,.field textarea{width:100%;padding:12px 13px;border:1px solid #c9c7bf;border-radius:3px;background:#fff;font:inherit;color:var(--ink)}.field textarea{min-height:110px;resize:vertical}.checkrow{display:flex;gap:9px;align-items:flex-start;font-size:13px;color:var(--muted);margin-top:18px}.checkrow input{margin-top:4px}.submit{margin-top:20px;background:var(--navy);color:#fff;border:0;padding:14px 20px;font:700 14px "DM Sans";border-radius:4px;cursor:pointer}.formnote{font-size:11px;color:var(--muted);margin-top:10px}
 footer{background:#0c1729;color:#dce2dc;padding:48px 0 25px}.foot{display:flex;justify-content:space-between;gap:30px;flex-wrap:wrap}.foot p{color:rgba(220,226,220,.62);max-width:420px;margin:10px 0}.foot a{color:#dce2dc}.copyright{border-top:1px solid rgba(255,255,255,.12);margin-top:35px;padding-top:20px;color:rgba(220,226,220,.48);font-size:12px}
 @media(max-width:820px){.navlinks{display:none}.infogrid,.commgrid,.appgrid,.about,.formgrid{grid-template-columns:1fr}.infoitem{border-left:0;border-top:1px solid var(--line)}.infoitem:first-child{border-top:0}.hero h1{letter-spacing:-3px}.head h2,.about h2{font-size:39px}.field.full{grid-column:auto}}
+.skip-to-content{position:absolute;left:12px;top:-80px;z-index:1000;background:#fff;color:#12213d;padding:12px 18px;font-weight:700;border-radius:4px}
+.skip-to-content:focus{top:12px}
+:where(a,button,input,select,textarea):focus-visible{outline:3px solid #f2a93b;outline-offset:3px}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important}}
 </style>
 </head>
 <body>
+<a class="skip-to-content" href="#main-content">Skip to main content</a>
 <header><div class="wrap nav"><a class="logo" href="#">StudentClutch<span>.co</span></a><nav class="navlinks"><a href="#about">About</a><a href="#committees">Committees</a><a href="#applications">Applications</a><a href="#contact">Contact</a></nav><a class="navcta" href="#applications">APPLY NOW</a></div></header>
 
-<section class="hero"><div class="wrap">
+<section class="hero" id="main-content" tabindex="-1"><div class="wrap">
 <div class="eyebrow">StudentClutch.co presents</div>
 <h1>Make your <em>voice</em> matter.</h1>
 <p>A student-led Model United Nations built around debate, diplomacy, leadership and the confidence to speak when it counts.</p>
