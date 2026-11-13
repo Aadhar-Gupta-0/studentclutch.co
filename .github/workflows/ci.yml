@@ -13,3 +13,5 @@ jobs:
           grep -qi '<html lang=' index.html
           grep -q 'DEMO ONLY — NOT SUBMITTED' index.html
           ! grep -q 'from pathlib import Path' index.html
+          grep -q 'skip-to-content' index.html
+          grep -q 'prefers-reduced-motion' index.html
